@@ -132,33 +132,11 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
+const revealElements = $$(".reveal");
 
-    /* Scroll reveal */
-
-    const revealElements = $$(".reveal");
-
-    if ("IntersectionObserver" in window && !reducedMotion) {
-        const revealObserver = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("revealed");
-                    revealObserver.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.12,
-            rootMargin: "0px 0px -35px 0px"
-        });
-
-        revealElements.forEach(element => {
-            revealObserver.observe(element);
-        });
-    } else {
-        revealElements.forEach(element => {
-            element.classList.add("revealed");
-        });
-    }
-
+revealElements.forEach(element => {
+    element.classList.add("revealed");
+});
     /* Active navigation link */
 
     const sectionLinks = $$(".nav-link[href^='#']");

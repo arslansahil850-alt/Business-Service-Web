@@ -1822,35 +1822,6 @@ p {
     line-height: 1.9;
 }
 
-.social-links {
-    display: flex;
-    gap: 9px;
-    margin-top: 23px;
-}
-
-.social-links a {
-    display: grid;
-    place-items: center;
-    width: 36px;
-    height: 36px;
-    color: #bdcde0;
-    background: rgba(255, 255, 255, 0.07);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 8px;
-    transition: color var(--transition), background var(--transition), transform var(--transition);
-}
-
-.social-links a:hover {
-    color: var(--white);
-    background: var(--accent);
-    transform: translateY(-3px);
-}
-
-.social-links svg {
-    width: 16px;
-    height: 16px;
-}
-
 .footer-column {
     display: flex;
     flex-direction: column;
@@ -2342,4 +2313,211 @@ p {
         grid-template-columns: 1fr;
         gap: 40px;
     }
+}
+
+
+
+
+
+/* Modern rounded buttons */
+button,
+input[type="button"],
+input[type="submit"],
+a.btn,
+a[class*="button"],
+a[class*="btn"],
+.filter-btn,
+.service-filter button {
+    border-radius: 14px !important;
+    overflow: hidden;
+    transition: all 0.3s ease !important;
+}
+
+/* Pill-shaped service filters */
+.filter-btn,
+.service-filter button {
+    border-radius: 50px !important;
+}
+
+/* Consultation button */
+nav a,
+header a {
+    transition: all 0.3s ease;
+}
+
+header a[class*="btn"],
+header a[class*="button"] {
+    border-radius: 14px !important;
+}
+
+/* Rounded icon boxes */
+.service-icon,
+.service-card-icon,
+.service-card .icon,
+.feature-icon,
+.icon-box {
+    border-radius: 16px !important;
+}
+
+/* Smooth hover effect */
+button:hover,
+a.btn:hover,
+a[class*="button"]:hover,
+a[class*="btn"]:hover {
+    transform: translateY(-2px);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    button,
+    a.btn,
+    a[class*="button"],
+    a[class*="btn"] {
+        max-width: 100%;
+    }
+}
+
+.service-icon {
+    width: 50px !important;
+    height: 50px !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px !important;
+    background: #edf0ff;
+    color: #5068ed;
+    flex-shrink: 0;
+}
+
+.service-icon svg {
+    width: 23px !important;
+    height: 23px !important;
+    stroke-width: 1.8;
+}
+
+.filter-btn {
+    border-radius: 12px !important;
+    transition: all 0.25s ease;
+}
+
+.service-more {
+    border-radius: 10px !important;
+    transition: all 0.25s ease;
+}
+
+.btn-primary,
+.btn-light {
+    border-radius: 12px !important;
+}
+
+.service-icon:hover {
+    background: #5068ed;
+    color: #fff;
+}
+
+.filter-btn:hover,
+.service-more:hover {
+    transform: translateY(-2px);
+}
+
+.service-more {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 50px !important;
+}
+
+.service-more svg,
+.btn svg,
+.text-link svg {
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+}
+
+.btn-primary,
+.btn-light {
+    border-radius: 50px !important;
+}
+
+.filter-btn {
+    border-radius: 50px !important;
+}
+
+.project-open,
+.slider-btn {
+    border-radius: 50% !important;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 23px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    color: #dce7f6;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ffffff;
+    background: var(--accent);
+    border-color: var(--accent);
+    transform: translateY(-4px);
+}
+
+.social-links a svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+    stroke-width: 2;
+    flex-shrink: 0;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 23px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    color: #dce7f6;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ffffff;
+    background: var(--accent);
+    border-color: var(--accent);
+    transform: translateY(-4px);
+}
+
+.social-links a svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
 }

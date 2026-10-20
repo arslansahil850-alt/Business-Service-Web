@@ -901,3 +901,6 @@ revealElements.forEach(element => {
     });
 });
 
+if (window.lucide) {
+    window.lucide.createIcons();
+}

@@ -46,30 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    /* Loader */
 
-    const loader = $(".loader");
-
-    const hideLoader = () => {
-        if (!loader) return;
-
-        loader.classList.add("loaded");
-        document.body.classList.remove("loading");
-    };
-
-    if (loader) {
-        document.body.classList.add("loading");
-
-        if (document.readyState === "complete") {
-            setTimeout(hideLoader, 350);
-        } else {
-            window.addEventListener("load", () => {
-                setTimeout(hideLoader, 350);
-            }, { once: true });
-        }
-
-        setTimeout(hideLoader, 4000);
-    }
 
     /* Announcement bar */
 
